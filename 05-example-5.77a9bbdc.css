@@ -1,0 +1,2 @@
+body{height:200vh;font-family:sans-serif}#time{text-align:center;font-size:50px}#buttons{justify-content:center;gap:20px;display:flex}button{color:#fff;cursor:pointer;background-color:#d65c5c;border:none;border-radius:15px;padding:10px 20px;font-size:40px}#continueBtn{background-color:#52d263}#continueBtn:disabled,#stopBtn:disabled{background-color:#c1c1c1}
+/*# sourceMappingURL=05-example-5.77a9bbdc.css.map */
