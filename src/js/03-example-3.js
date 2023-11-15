@@ -1,10 +1,24 @@
 /*  
-  Example 3 : cod asincron "sincron"
+  Example 3 :
 */
 
-// delay egal => functiile (asincroane) se executa "sincron", in ordiea declararii lor (de sus in jos) //
-// --> 2, 1, 3 //
+const promise = new Promise((resolve, reject) => {
+  resolve("OK");
+  reject("Error: something went wrong");
+});
+promise
+  .then((value) => console.log(value))
+  .catch((error) => console.log(error))
+;
+// -->: OK //
 
-setTimeout(() => console.log('2'), 2000);
-setTimeout(() => console.log('1'), 2000);
-setTimeout(() => console.log('3'), 2000);
+
+const p = new Promise((resolve, reject) => {
+  // resolve("OK");
+  reject("Error: something went wrong");
+});
+p
+  .then((value) => console.log(value))
+  .catch((error) => console.log(error))
+;
+// -->: Error: something went wrong //

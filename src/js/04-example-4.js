@@ -1,14 +1,28 @@
 /*  
-  Example 4: 
+  Example 4 :
 */
 
-for (let i = 3; i > 0; i--) {
-  const delay = i * 1000;
-  setTimeout(() => console.log(i), delay);
-}
+const statusMessage = document.getElementById('statusMessage');
 
-// i = 3 => const delay = 3 * 1000; setTimeout(() => console.log(3), 3000); //
-// i = 2 => const delay = 2 * 1000; setTimeout(() => console.log(2), 2000); //
-// i = 1 => const delay = 1 * 1000; setTimeout(() => console.log(1), 1000); //
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve({
+      status: 'ok',
+      message: 'Totul a fost ok',
+    });
+    // reject({
+    //     status: 'error',
+    //     message: 'A aparut o eroare'
+    // })
+  }, 2000);
+});
 
-// --> 1, 2 , 3 //
+promise
+  .then(value => {
+    console.log(value);
+    statusMessage.innerHTML = `<h1>${value.status}</h1><p>${value.message}</p>`;
+  })
+  .catch(error => {
+    console.log(error);
+    statusMessage.innerHTML = `<h1>${error.status}</h1><p>${error.message}</p>`;
+  });

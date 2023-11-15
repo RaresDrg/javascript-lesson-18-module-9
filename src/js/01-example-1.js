@@ -1,16 +1,17 @@
 /*  
-  Example 1 : cod sincron / cod asincron (setTimeout()
+  Example 1 : 
 */
 
-console.log('1');
+console.log('A');
 
-setTimeout(() => console.log('2'), 0);
+Promise.reject('B')
+  .then(
+    value => console.log('value')
+    // error => console.log(error, 'error in then')  // *de obicei, se lucreaza cu erori in catch(). //
+  )
+  .catch(error => console.log(error, 'error in catch'))
+  .finally(() => console.log('D'));
 
-setTimeout(() => console.log('3'), 1000);
+console.log('E');
 
-console.log('4');
-
-setTimeout(() => console.log('5'), 200);
-
-// -->: 1, 4, 2, 5, 3 //
-// se executa codul sincron, dupa care se exceuta si cel asincron (setTimeout()) //
+// =>: A, E, B, D //

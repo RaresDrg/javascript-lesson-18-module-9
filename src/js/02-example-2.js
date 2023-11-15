@@ -1,10 +1,21 @@
 /*  
-  Example 2 : ordinea de executie a codului asincron
+  Example 2 : 
 */
 
-// setTimeout(calback, delay) //
-// executare in functie de valoarea delay: --> 1, 2, 3 //
+console.log('Request data...');
 
-setTimeout(() => console.log(3), 3000);
-setTimeout(() => console.log(2), 2000);
-setTimeout(() => console.log(1), 1000);
+setTimeout(() => {
+  console.log('Preparing data...');
+
+  const data = {
+    id: 1,
+    text: 'lorem ipsum dolor sit amet',
+    status: 'important',
+  };
+
+  setTimeout(() => {
+    console.log('Data received: ', data);
+  }, 2000);
+}, 2000);
+
+console.log('Cod executat dupa');
