@@ -1,0 +1,2 @@
+!function(){var t=document.getElementById("statusMessage");new Promise((function(t,n){setTimeout((function(){t({status:"ok",message:"Totul a fost ok"})}),2e3)})).then((function(n){console.log(n),t.innerHTML="<h1>".concat(n.status,"</h1><p>").concat(n.message,"</p>")})).catch((function(n){console.log(n),t.innerHTML="<h1>".concat(n.status,"</h1><p>").concat(n.message,"</p>")}))}();
+//# sourceMappingURL=04-example-4.6f03a59a.js.map

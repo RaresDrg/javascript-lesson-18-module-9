@@ -1,0 +1,2 @@
+!function(){console.log("Request data...");var o=new Promise((function(o,n){setTimeout((function(){console.log("Preparing data...");var e={id:1,text:"lorem ipsum dolor sit amet",status:"important"};e.id||n(new Error("No id!")),o(e)}),2e3)}));console.log("Cod de executat dupa"),console.log(o),o.then((function(o){return console.log("Data changed"),o.status="ordinary",o})).then((function(o){return console.log(o)})).catch((function(o){return console.error(o)})).finally((function(){return console.log("Promise end")}))}();
+//# sourceMappingURL=05-example-5.92b4a627.js.map

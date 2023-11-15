@@ -1,0 +1,2 @@
+console.log("Request data...");const o=new Promise(((o,e)=>{setTimeout((()=>{console.log("Preparing data...");const t={id:1,text:"lorem ipsum dolor sit amet",status:"important"};t.id||e(new Error("No id!")),o(t)}),2e3)}));console.log("Cod de executat dupa"),console.log(o),o.then((o=>(console.log("Data changed"),o.status="ordinary",o))).then((o=>console.log(o))).catch((o=>console.error(o))).finally((()=>console.log("Promise end")));
+//# sourceMappingURL=05-example-5.bc68dbda.js.map
