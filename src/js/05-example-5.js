@@ -10,6 +10,7 @@ const promise = new Promise((resolve, reject) => {
 
     const data = {
       id: 1,
+      // id: 1,
       text: 'lorem ipsum dolor sit amet',
       status: 'important',
     };

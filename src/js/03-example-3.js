@@ -3,22 +3,21 @@
 */
 
 const promise = new Promise((resolve, reject) => {
-  resolve("OK");
-  reject("Error: something went wrong");
+  resolve('OK');
+  reject('Error: something went wrong');
 });
+
 promise
-  .then((value) => console.log(value))
-  .catch((error) => console.log(error))
-;
+  .then(value => console.log(value))
+  .catch(error => console.log(error));
 // -->: OK //
 
 
-const p = new Promise((resolve, reject) => {
-  // resolve("OK");
-  reject("Error: something went wrong");
+const promise2 = new Promise((resolve, reject) => {
+  reject('Error: something went wrong');
 });
-p
-  .then((value) => console.log(value))
-  .catch((error) => console.log(error))
-;
+
+promise2
+  .then(value => console.log(value))
+  .catch(error => console.log(error));
 // -->: Error: something went wrong //
